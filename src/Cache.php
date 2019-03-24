@@ -32,10 +32,6 @@ class Cache
 			return false;
 		}
 
-		if (!chmod($basePath, 0777)) {
-			return false;
-		}
-
 		return true;
 	}
 
