@@ -23,20 +23,6 @@ class Cache
 
 	protected function createBasePath($basePath)
 	{
-		if (!file_exists($basePath)) {
-			if (!$this->createBasePath(dirname($basePath))) {
-				return false;
-			}
-
-			if (!$this->createDirectory($basePath)) {
-				return false;
-			}
-		}
-
-		if (!is_writable($basePath) || !is_dir($basePath)) {
-			return false;
-		}
-
 		return true;
 	}
 
